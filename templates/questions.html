@@ -1,0 +1,16 @@
+{% extends 'dummy.html' %}
+{% block title %}
+    <title>questions</title>
+{% endblock %}
+
+{% block body_block %}
+<center>
+    <h1>you can upload questions here</h1>
+</center>
+    <form method="POST">
+        {% csrf_token %}
+        {{qfo.as_p}}
+        <center><input type="submit" value="upload"></center>
+    </form>
+</center>
+{% endblock %}

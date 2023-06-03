@@ -1,0 +1,23 @@
+{% extends 'dummy.html' %}
+
+{% block title %}
+    <title>Home Page</title>
+{% endblock %}
+
+{% block body_block  %}
+<center>
+
+<h2> {{Qcl.title}}</h2><br>
+
+<table border="2px">
+    
+    {% for i in Qcl.question.all %}
+
+        
+        <td> {{i.description}}</td>
+        <td> {{i.user}}</td>    
+     {% endfor %}
+
+</table>
+</center>
+{% endblock %}
